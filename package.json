@@ -1,0 +1,47 @@
+{
+  "name": "shoptools-kit",
+  "version": "1.0.0",
+  "description": "Product CSV engine for e-commerce store migrations: validate, repair and export Shopify-format product catalogs. Pure TypeScript, zero dependencies.",
+  "license": "MIT",
+  "author": "C. W. Chen",
+  "homepage": "https://shoptools.one",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chencw6578-commits/shoptools-kit.git"
+  },
+  "keywords": [
+    "csv",
+    "product-catalog",
+    "ecommerce",
+    "migration",
+    "csv-validator",
+    "csv-repair",
+    "store-migration",
+    "typescript",
+    "zero-dependency"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test \"__tests__/*.test.ts\"",
+    "prepublishOnly": "node --test \"__tests__/*.test.ts\" && tsc"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
